@@ -4,6 +4,6 @@ Spring-Boot-Layers-Index: BOOT-INF/layers.idx
 Start-Class: org.gradle.fins.FinsApiApplication
 Spring-Boot-Classes: BOOT-INF/classes/
 Spring-Boot-Lib: BOOT-INF/lib/
-Spring-Boot-Version: 2.7.8
+Spring-Boot-Version: 2.7.5
 Main-Class: org.springframework.boot.loader.JarLauncher
 

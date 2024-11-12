@@ -7,6 +7,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,6 +22,12 @@ public class UserController {
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
+    }
+
+    @GetMapping("/user/auth")
+    @CrossOrigin
+    public String getAuthDescription(Authentication authentication) {
+        return "Hello " + authentication.getName() + ", You try to access User API with Authorization only for ADMIN";
     }
 
     @GetMapping("/user")
